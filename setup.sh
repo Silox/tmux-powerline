@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-REPO=http://github.com/nudded/dotfiles
+REPO=http://github.com/silox/dotfiles
 DEST=".dotfiles"
 
 if [[ -d $DEST ]];then
