@@ -43,7 +43,7 @@ nnoremap <leader>gt :Gstatus<cr>
 
 let NERDTreeIgnore = ['\.pyc$']
 
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'compatible'
 let g:haddock_browser="open"
 
 " }}}
@@ -70,12 +70,9 @@ set autoread " auto reload file on change
 set scrolloff=8 "keep 8 lines below/above cursor
 " }}}
 " Colorscheme {{{
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_underline=0
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme wombat
 " }}}
 " Wrapping {{{
 set nowrap
