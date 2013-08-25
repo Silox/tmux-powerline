@@ -1,6 +1,6 @@
 [user]
-  name = Toon Willems
-  email = willemstoon@gmail.com
+  name = Tom Naessens
+  email = siloxtom@gmail.com
 [color]
   ui = true
 [core]
@@ -10,9 +10,7 @@
   unstage = reset HEAD --
 [push]
   default = current
-[advice]
-  statusHints = false
 [help]
   autocorrect = 1
 [github]
-	user = nudded
+	user = Silox
