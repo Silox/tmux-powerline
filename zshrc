@@ -20,11 +20,18 @@ export LC_ALL='en_US.UTF-8'
 autoload colors
 colors
 
+source ~/.zsh/zshrc.sh
 setopt prompt_subst
-PROMPT='[%T]%{$fg[red]%} %n@%m %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} %(?.✔.✗) '
-export PATH=".:/usr/local/bin/:/usr/local/sbin/:$PATH"
-
+ZSH_THEME_GIT_PROMPT_PREFIX=" ("
+PROMPT='[%T]%{$fg[red]%} %n@%m %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_super_status) %(?.✔.✗) '
+export PATH="/home/tnaessens/.cabal/bin:.:/usr/local/bin/:/usr/local/sbin/:/home/tnaessens/android-sdks/platform-tools/:$PATH"
+export PATH=/home/tnaessens/.gem/bin:$PATH
+export PATH=/home/tnaessens/Programs/gradle-1.7/bin:$PATH
+export ANDROID_HOME=~/android-sdks/
 export EDITOR=vim
+export GEM_HOME=$HOME/.gem
+export MODULEPATH=$HOME/.local/easybuild/modules/all
+source /usr/share/modules/init/zsh
 
 # Mac specific thingies
 platform=$(uname -a)

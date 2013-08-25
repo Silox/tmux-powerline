@@ -1,28 +1,5 @@
-" Bundles {{{
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call pathogen#infect()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'fugitive.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'mileszs/ack.vim'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'tpope/vim-commentary'
-Bundle 'altercation/vim-colors-solarized'
-
-Bundle 'lukerandall/haskellmode-vim'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'Shougo/neocomplcache'
-
-Bundle 'nginx.vim'
-
-filetype plugin indent on
-" }}}
 " Leader {{{
 
 let mapleader=','
@@ -43,7 +20,7 @@ nnoremap <leader>gt :Gstatus<cr>
 
 let NERDTreeIgnore = ['\.pyc$']
 
-let g:Powerline_symbols = 'compatible'
+let g:Powerline_symbols = 'fancy'
 let g:haddock_browser="open"
 
 " }}}
@@ -70,9 +47,14 @@ set autoread " auto reload file on change
 set scrolloff=8 "keep 8 lines below/above cursor
 " }}}
 " Colorscheme {{{
+set t_Co=16
+let g:solarized_termcolors=256
+let g:solarized_contrast="normal"
+let g:solarized_underline=0
+let g:solarized_termtrans=0
 syntax enable
 set background=dark
-colorscheme wombat
+colorscheme solarized
 " }}}
 " Wrapping {{{
 set nowrap
@@ -219,16 +201,15 @@ augroup ft_nginx
 
 augroup END
 " }}}
+" Prolog {{{
+  au BufRead *.pl set ft=prolog
+" }}}
 " }}}
 " Mappings {{{
 nnoremap <silent> <C-l> :noh<CR><C-L>
 " edit and source vimrc easily
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" spare my fingers in the long run
-inoremap jj <esc>
-inoremap jk <esc>
 
 " rewrite file with sudo
 cmap w!! w !sudo tee % >/dev/null
@@ -291,6 +272,11 @@ function! PipeToBc()
   let @@ = saved_unnamed_register
 endfunction
 nnoremap <leader>bc :call PipeToBc()<CR>
+" }}}
+" VBundle {{{
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
 " }}}
 
 " for some reason vim searches for something
