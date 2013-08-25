@@ -16,6 +16,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
+export TMUX_POWERLINE_SEG_WEATHER_LOCATION="970013"
 
 autoload colors
 colors
