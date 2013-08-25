@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-REPO=http://github.com/silox/dotfiles
+REPO=http://github.com/Silox/dotfiles
 DEST="$HOME/.dotfiles"
 
 if [[ -d $DEST ]];then
@@ -38,7 +38,7 @@ setup gitconfig "$HOME/.gitconfig"
 echo "Cloning tmux-powerline into ~/.tmux"
 rm -rf ~/.tmux/powerline
 mkdir -p ~/.tmux/powerline
-git clone http://github.com/nudded/tmux-powerline ~/.tmux/powerline
+git clone http://github.com/Silox/tmux-powerline ~/.tmux/powerline
 
 echo "updating Bundles"
 vim +BundleInstall! +qall
