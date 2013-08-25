@@ -1,5 +1,30 @@
 call pathogen#infect()
 
+" Bundles {{{
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'fugitive.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'mileszs/ack.vim'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/vimshell'
+Bundle 'tpope/vim-commentary'
+Bundle 'altercation/vim-colors-solarized'
+
+Bundle 'lukerandall/haskellmode-vim'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'Shougo/neocomplcache'
+
+Bundle 'nginx.vim'
+
+filetype plugin indent on
+" }}}
 " Leader {{{
 
 let mapleader=','
