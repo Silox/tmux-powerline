@@ -1,0 +1,16 @@
+[user]
+  name = Tom Naessens
+  email = siloxtom@gmail.com
+[color]
+  ui = true
+[core]
+  editor = vim
+[alias]
+  co = checkout
+  unstage = reset HEAD --
+[push]
+  default = current
+[help]
+  autocorrect = 1
+[github]
+	user = Silox
