@@ -46,3 +46,8 @@ else
   eval $(dircolors)
 fi
 
+if [[ "$TERM" != "screen-256color" ]]; then
+  tmux
+  exit
+fi
+
