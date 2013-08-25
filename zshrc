@@ -33,14 +33,16 @@ export GEM_HOME=$HOME/.gem
 export MODULEPATH=$HOME/.local/easybuild/modules/all
 source /usr/share/modules/init/zsh
 
+alias tmux="tmux -2"
+
 # Mac specific thingies
 platform=$(uname -a)
 if [[ $platform =~ "Darwin" ]]; then
   eval "$(rbenv init -)"
-  eval "$(hub alias -s)"
   alias vim='mvim -v'
-  export CLICOLOR=1
+#  export CLICOLOR=1
 else
   alias ls="ls --color=auto"
   eval $(dircolors)
 fi
+
