@@ -20,7 +20,7 @@ export LC_ALL='en_US.UTF-8'
 autoload colors
 colors
 
-source ~/.zsh/zshrc.sh
+source ~/.dotfiles/zsh/zshrc.sh
 setopt prompt_subst
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 PROMPT='[%T]%{$fg[red]%} %n@%m %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_super_status) %(?.✔.✗) '
