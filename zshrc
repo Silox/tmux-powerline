@@ -35,6 +35,8 @@ source /usr/share/modules/init/zsh
 
 alias tmux="tmux -2"
 
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
 # Mac specific thingies
 platform=$(uname -a)
 if [[ $platform =~ "Darwin" ]]; then
